@@ -1,0 +1,52 @@
+/**index.wxss**/
+.excelListContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+}
+.excelListContainer .excelList-pannel{
+  padding-bottom: 100rpx;
+}
+
+.excelListContainer .excelList {
+  width: 94vw;
+}
+
+.excelListContainer .loading {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.excelList .title {
+  width: 100%;
+}
+
+.uploadContainer {
+  width: fit-content;
+  position: fixed;
+  right: 50rpx;
+  bottom: 50rpx;
+}
+.upload-btn{
+  background-color: var(--primary-light);
+  height: 120rpx;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.upload-icon {
+  font-size: 65rpx;
+}
+.upload-loading{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}

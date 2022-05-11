@@ -1,0 +1,35 @@
+<!--index.wxml-->
+<view class="excelListContainer">
+  <view class="loading" wx:if="{{loading}}">
+    <vtu-loading style="width: 100%;" label="加载中..." show="{{true}}"></vtu-loading>
+  </view>
+
+  <view class="excelList-pannel" wx:else>
+    <block wx:if="{{excelLists.length != 0}}">
+      <view wx:for="{{excelLists}}" wx:key="_id">
+        <vtu-panel v-class="excelList" shadow="{{true}}">
+          <vtu-cell v-class="title" slot="header" title="{{item.title}}" border content="{{item.updateTime}}" data-detail="{{item}}" bind:click="getOneExcelDetail">
+            <view slot="after" data-currentId="{{item._id}}" data-currentFileID="{{item.fileID}}" catchtap="openDownDraw">...</view>
+          </vtu-cell>
+          <!-- <view>{{item.title}}</view> -->
+        </vtu-panel>
+      </view>
+    </block>
+    <block wx:else>
+      <vtu-empty icon="vtu-icon vtu-icon-gouwuchekong" fill-screen icon-color="orange" icon-size="50px" label="空空如也,上传文件把~"></vtu-empty>
+    </block>
+    <view class="uploadContainer">
+      <button style="width: 120rpx;" size="default" class="upload-btn">
+        <block wx:if="{{excelLoading}}">
+          <vtu-loading class="upload-loading" style="width: 100rpx;" label="" show="{{true}}"></vtu-loading>
+        </block>
+        <block wx:else>
+          <icon bindtap="chooseExcel" class="upload-icon iconfont icon-file-add"></icon>
+        </block>
+      </button>
+    </view>
+  </view>
+
+  <vtu-sheet show="{{downSheetshow}}" sheetList="{{downSheetList}}" bind:select="bindSelect"></vtu-sheet>
+  <vtu-dialog id="Vtu-Dialog"></vtu-dialog>
+</view>

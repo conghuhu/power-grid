@@ -1,0 +1,8 @@
+/* pages/excelTableDeatil/components/action_td/action_td.wxss */
+.action-box{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

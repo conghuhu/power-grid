@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText":"云文件详情",
+  "usingComponents": {
+    "vtu-checkbox": "/miniprogram_npm/vtuweapp/checkbox/checkbox/vtu-checkbox",
+    "vtu-checkbox-prop": "/miniprogram_npm/vtuweapp/prop/checkbox/prop/vtu-checkbox-prop",
+    "vtu-checkbox-prop-item": "/miniprogram_npm/vtuweapp/prop/checkbox/item/vtu-checkbox-prop-item",
+    "vtu-prop": "/miniprogram_npm/vtuweapp/prop/vtu-prop",
+    "vtu-input": "/miniprogram_npm/vtuweapp/input/item/vtu-input",
+    "mtable":"/components/table/table",
+    "action-td": "./components/action_td/action_td"
+  }
+}

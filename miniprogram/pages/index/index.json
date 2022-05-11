@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText":"云文件列表",
+  "enablePullDownRefresh":true,
+  "usingComponents": {
+    "vtu-panel": "/miniprogram_npm/vtuweapp/panel/vtu-panel",
+    "vtu-cell": "/miniprogram_npm/vtuweapp/cell/item/vtu-cell",
+    "vtu-empty": "/miniprogram_npm/vtuweapp/empty/vtu-empty"
+  }
+}

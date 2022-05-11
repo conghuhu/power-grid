@@ -1,0 +1,154 @@
+view,
+text,
+swiper,
+swiper-item,
+image,
+navigator {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+page {
+  background-color: #fdfcf8;
+}
+
+.user_info_wrap {
+  height: 35vh;
+  overflow: hidden;
+  background-color: var(--primary);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 头像 */
+.user_info_wrap .user_info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.user_info_wrap .user_info .user_icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+
+/* 昵称 */
+.user_info_wrap .user_info .user_name {
+  font-size: 36rpx;
+  margin-top: 25rpx;
+  font-weight: 400;
+  color: #f3f0dc;
+  z-index: 99;
+}
+
+/* 其他内容,列表 */
+.user_content {
+  position: relative;
+}
+
+.user_content .user_main {
+  padding-bottom: 100rpx;
+  color: #666;
+  position: absolute;
+  width: 90%;
+  left: 50%;
+  top: 40rpx;
+  transform: translateX(-50%);
+  z-index: 5;
+}
+
+.user_content .user_main .history_wrap {
+  background-color: #fff;
+  width: 677rpx;
+  height: 105rpx;
+  display: flex;
+  border-radius: 20rpx;
+  box-shadow: 0 4px 8px 0 rgba(192, 189, 189, 0.2), 0 6px 20px 0 rgba(185, 181, 181, 0.19);
+}
+
+.user_content .user_main .history_wrap navigator {
+  flex: 1;
+  text-align: center;
+  padding: 10rpx 0;
+}
+
+.user_content .user_main .history_wrap navigator .his_num {
+  color: #f2c512;
+  position: relative;
+  top: 0rpx;
+}
+
+.user_content .user_main .history_wrap navigator .his_name {
+  position: absolute;
+  top: 50rpx;
+  margin-left: 115rpx;
+}
+
+/* 设置以下 */
+.user_content .user_main .app_info_wrap {
+  margin-top: 30rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  box-shadow: 0 4px 8px 0 rgba(146, 143, 143, 0.2), 0 6px 20px 0 rgba(141, 139, 139, 0.19);
+}
+
+.user_content .user_main .app_info_wrap .app_info_item {
+  padding: 20rpx;
+}
+
+.user_content .user_main .app_info_wrap .app_settings {
+  display: flex;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+
+.text1 {
+  top: 5rpx;
+  position: relative;
+  left: 15rpx;
+}
+
+.user_content .user_main .app_info_wrap .app_info_contact {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  height: 85rpx;
+  text-align: left;
+  text-decoration: none;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1rpx solid #ccc;
+  font-size: 28rpx;
+  color: #666;
+  width: 100%;
+}
+
+.user_content .user_main .app_info_wrap .app_info_contact::after {
+  border: none;
+  border-radius: 0;
+}
+
+.text2 {
+  display: flex;
+  position: relative;
+  left: 15rpx;
+}
+
+
+.text5 {
+  display: flex;
+  position: relative;
+  left: 15rpx;
+}
+
+.app_info_item.app_info_aboutus {
+  display: flex;
+}

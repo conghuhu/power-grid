@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "个人中心",
+  "navigationStyle":"custom",
+  "backgroundTextStyle": "dark",
+  "usingComponents": {
+    "vtu-navbar": "/miniprogram_npm/vtuweapp/navbar/vtu-navbar",
+    "vtu-avatar": "/miniprogram_npm/vtuweapp/avatar/vtu-avatar"
+  }
+}

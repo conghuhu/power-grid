@@ -1,0 +1,10 @@
+<!--pages/excelTableDeatil/components/action_td/action_td.wxml-->
+<view class="action-box" data-form="{{columns.form}}">
+  <block wx:if="{{columns.form === 'IMG'}}">
+    <vtu-imgPicker style="width: 100%;" data-type="{{columns.key}}" count="1" col="1" list="{{imgList}}" bind:change="imageChange" bind:remove="removeImage"> </vtu-imgPicker>
+  </block>
+  <block wx:elif="{{columns.form === 'INPUT'}}">
+    <textarea type="text" auto-height value="{{item[columns.key]}}" placeholder="null" bindconfirm="confirmInput" bindblur="confirmInput" data-type="{{columns.key}}" />
+  </block>
+
+</view>

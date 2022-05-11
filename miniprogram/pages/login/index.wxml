@@ -1,0 +1,10 @@
+<!--pages/login/index.wxml-->
+
+<view class="header">
+  <view class="avatar-url">
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+  <open-data type="userNickName" class="nickname"></open-data>
+
+  <vtu-btn class="auth_btn" type="primary"  bindtap="getUserProfile" >微信授权</vtu-btn>
+</view>

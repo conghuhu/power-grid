@@ -1,0 +1,46 @@
+<!--pages/excelTableDeatil/index.wxml-->
+<view class="file-container">
+  <view class="loading-container" wx:if="{{loading}}">
+    <vtu-loading style="width: 100%;" label="加载中..." show="{{true}}"></vtu-loading>
+  </view>
+  <block wx:else>
+    <view class="navTop">
+      <text class="title">{{title}}</text>
+      <view class="iconList">
+        <icon class="sousuo iconfont icon-sousuo" bindtap="openSearchProp"></icon>
+        <icon class="set iconfont icon-shezhi" bindtap="openfieldboxProp"></icon>
+        <icon class="export iconfont icon-export" bindtap="exportExcel"></icon>
+      </view>
+    </view>
+    <!-- <view class="deadLine">{{deadLine}}</view> -->
+    <block wx:if="{{tableLoading}}">
+      <view style="height: 84vh;display: flex;align-items: center;">
+        <vtu-loading style="width: 100%;" label="加载中..." show="{{true}}"></vtu-loading>
+      </view>
+    </block>
+    <block wx:else>
+      <mtable class="basic-table" columns="{{showColumns}}" dataList="{{dataList}}" showTipImage="{{false}}" scrollX="{{true}}" getListLoading="{{tableLoading}}" tableHeight="{{'84vh'}}" generic:action-td="action-td" bindclickaction="handleClickAction" bindonactionevent="handleOnActionEvent" />
+    </block>
+
+    <view class="pagination">
+      <vtu-btn type="primary" inlineBlock size="mini" disabled="{{page == 1}}" data-index="{{page>1?page-1:page}}" class="but_Style1" bindtap="paging_bind">上一页</vtu-btn>
+      <view style="margin-left: 15rpx;margin-right: 15rpx;">
+        {{page}}/{{pageCount}}
+      </view>
+      <vtu-btn type="primary" inlineBlock size="mini" disabled="{{page == pageCount}}" data-index="{{page<pageCount?page+1:page}}" class="but_Style1" bindtap="paging_bind">下一页</vtu-btn>
+      <view style="margin-left: 15rpx;"> 共{{dataList.length}}/{{allDataList.length}}条</view>
+    </view>
+    <vtu-checkbox-prop show="{{showFieldProp}}" model="{{columns}}" align="right" checkbox-icon="" active-color="orange" active-checkbox-icon="iconfont icon-duihao" active-checkbox-color="blue" bind:change="changeShowFieldList">
+      <vtu-checkbox-prop-item wx:for="{{columns}}" wx:key="index" value="{{item}}" disabled="{{columns.length - 1 - index < 4}}" label="{{item}}" icon="">
+      </vtu-checkbox-prop-item>
+    </vtu-checkbox-prop>
+    <vtu-prop title="按字段筛选" show="{{showSearchProp}}" closeOnClickOverlay="{{false}}">
+      <view class="prop-content">
+        <vtu-input title="普通选项" icon="" border value="{{pickerFieldIndex}}" range="{{pickerColumns}}" range-key="label" type="picker" bindchange="changePickerField" arrow></vtu-input>
+        <vtu-input title="关键字" border placeholder="请输入搜索的关键字" bind:confirm="changeSearchContent" bind:blur="changeSearchContent" type="input" text-align="left"></vtu-input>
+        <vtu-btn style="margin-top: 50rpx;" type="primary" bindtap="search">搜索</vtu-btn>
+        <vtu-btn style="margin-top: 20rpx;margin-bottom: 40rpx;" type="warning" bindtap="refresh">重置</vtu-btn>
+      </view>
+    </vtu-prop>
+  </block>
+</view>

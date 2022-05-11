@@ -1,0 +1,40 @@
+/* pages/login/index.wxss */
+page {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-size: 28rpx;
+  color: #0a0a0a;
+}
+
+.header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 300rpx;
+  position: relative;
+  top: 100rpx;
+  left: 225.2rpx;
+}
+.avatar-url {
+  width: 150rpx;
+  height: 150rpx;
+  display: block;
+  overflow: hidden;
+  border: 8rpx solid #f2c512;
+  border-radius: 50%;
+}
+
+.nickname {
+  font-size: 36rpx;
+  margin-top: 25rpx;
+  font-weight: 400;
+  color: #0a0a0a;
+}
+
+.auth_btn{
+  margin-top: 100rpx;
+  width: 50vw;
+}

@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/login/index",
+    "pages/index/index",
+    "pages/user/index",
+    "pages/excelTableDeatil/index"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "勘察云文档",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "",
+    "selectedColor": "#000000",
+    "backgroundColor": "#f5f5f4",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "勘察",
+        "iconPath": "images/modular.png",
+        "selectedIconPath": "images/modular-o.png"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "text": "我的",
+        "iconPath": "images/user.png",
+        "selectedIconPath": "images/user-o.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "vtu-btn": "/miniprogram_npm/vtuweapp/button/vtu-btn",
+    "vtu-toast": "/miniprogram_npm/vtuweapp/toast/vtu-toast",
+    "vtu-loading": "/miniprogram_npm/vtuweapp/loading/vtu-loading",
+    "vtu-sheet": "/miniprogram_npm/vtuweapp/sheet/vtu-sheet",
+    "vtu-imgPicker": "/miniprogram_npm/vtuweapp/imgPicker/vtu-imgPicker",
+    "vtu-dialog": "/miniprogram_npm/vtuweapp/dialog/vtu-dialog"
+  },
+  "lazyCodeLoading": "requiredComponents",
+  "style": "v2"
+}
